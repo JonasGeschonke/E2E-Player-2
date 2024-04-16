@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig, passthroughImageService} from 'astro/config';
 import svelte from '@astrojs/svelte';
 import deno from '@astrojs/deno';
 import tailwind from '@astrojs/tailwind';
@@ -9,5 +9,8 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   output: 'server',
   adapter: deno(),
+  image: {
+    service: passthroughImageService()
+  },
   integrations: [svelte(), tailwind(), mdx(), sitemap()]
 });
