@@ -37,6 +37,6 @@ jobs:
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: "jonasgescho-e2e-player-81"
+          project: "e2e-player"
           entrypoint: "server/entry.mjs"
           root: "dist"
