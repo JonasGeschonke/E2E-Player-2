@@ -1,0 +1,27 @@
+@layer base {
+    :root {
+        --text: #17110d;
+        --background: #f7e8df;
+        --primary: #6f462a;
+        --secondary: #ff6600;
+        --accent: #aa4f13;
+    }
+
+    .dark {
+        --text: #f2ece8;
+        --background: #1f1108;
+        --primary: #d5ac90;
+        --secondary: #ff6600;
+        --accent: #ec9155;
+    }
+
+    .gradients {
+        --linearPrimarySecondary: linear-gradient(rgb(213, 172, 144), rgb(255, 102, 0));
+        --linearPrimaryAccent: linear-gradient(rgb(213, 172, 144), rgb(236, 145, 85));
+        --linearSecondaryAccent: linear-gradient(rgb(255, 102, 0), rgb(236, 145, 85));
+        --radialPrimarySecondary: radial-gradient(rgb(213, 172, 144), rgb(255, 102, 0));
+        --radialPrimaryAccent: radial-gradient(rgb(213, 172, 144), rgb(236, 145, 85));
+        --radialSecondaryAccent: radial-gradient(rgb(255, 102, 0), rgb(236, 145, 85));
+    }
+}
+

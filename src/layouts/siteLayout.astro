@@ -1,0 +1,38 @@
+---
+const { title } = Astro.props;
+import Header from '../components/header.astro';
+import '@fontsource/poppins';
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body class="">
+        <Header [title]="title"></Header>
+        <div class="background-image h-screen flex flex-col">
+            <slot />
+        </div>
+    </body>
+</html>
+
+<style>
+    .background-image {
+        background-image: url("/bg-gradient.svg");
+        background-size: cover;
+        background-position: 0 0;
+        /* height: 400vh; */
+		z-index: -1;
+        opacity: 90%;
+        color: var(--white);
+        font-weight: 400;
+        font-size: var(--p);
+        margin: 0;
+        position: relative;
+    }
+</style>
+
