@@ -7,9 +7,11 @@ export default {
       colors: {
         'text': '#f2ece8',
         'background': '#0e0906',
+        'background2': '#2B1C13',
         'primary': '#d5ac90',
         'secondary': '#ff6600',
         'accent': '#ec9155',
+        'accent-green': 'rgb(34,112,30)'
       },
       fontFamily: {
         sans: ['Poppins', ...defaultTheme.fontFamily.sans]
