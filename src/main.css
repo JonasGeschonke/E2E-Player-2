@@ -14,14 +14,23 @@
         --secondary: #ff6600;
         --accent: #ec9155;
     }
-
-    .gradients {
-        --linearPrimarySecondary: linear-gradient(rgb(213, 172, 144), rgb(255, 102, 0));
-        --linearPrimaryAccent: linear-gradient(rgb(213, 172, 144), rgb(236, 145, 85));
-        --linearSecondaryAccent: linear-gradient(rgb(255, 102, 0), rgb(236, 145, 85));
-        --radialPrimarySecondary: radial-gradient(rgb(213, 172, 144), rgb(255, 102, 0));
-        --radialPrimaryAccent: radial-gradient(rgb(213, 172, 144), rgb(236, 145, 85));
-        --radialSecondaryAccent: radial-gradient(rgb(255, 102, 0), rgb(236, 145, 85));
+/* Our Engine button default styles */
+    #startStopButton {
+        width: 80px; 
+        height: auto;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+                    0 1px 3px rgba(0, 0, 0, 0.08); 
+    }
+    /* To make our button hover */
+    #startStopButton:hover {
+        transform: translateY(-2px); 
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2),
+                    0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    /* To make our engine button to be pushed down */
+    #startStopButton:active {
+        transform: translateY(2px); 
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
     }
 }
-
