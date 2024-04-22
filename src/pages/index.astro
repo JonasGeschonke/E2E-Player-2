@@ -39,12 +39,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (startButton && heroSection) {
     startButton.addEventListener('click', function() {
-      // Use Tailwind's configured animation
+      // Used Tailwind's configured animation
       heroSection.classList.add('animate-zoomin');
 
       setTimeout(() => {
-        window.location.href = '/aufgabe';  // Navigate after the zoom effect
-      }, 800);  // This should match the CSS transition duration
+        // Navigation to aufgabe page after the zoom effect
+        window.location.href = '/aufgabe';  
+      }, 800);  
     });
   } else {
     console.error('Start button or hero section not found');
