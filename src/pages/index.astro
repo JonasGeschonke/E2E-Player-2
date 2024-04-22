@@ -6,50 +6,49 @@ import Header from "../components/header.astro";
 const title = "E2E-Player #2";
 ---
 
-<SiteLayout [title]="title">
-    <div class="py-24 px-5 w-3/6 h-3/6">
-        <CardCenterLayout>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-            no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        </CardCenterLayout>
-    </div>
-    <div class="flex flex-row justify-evenly gap-3">
-        <CardCenterLayout>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet.
-        </CardCenterLayout>
-        <CardCenterLayout>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet.
-        </CardCenterLayout>
-    </div>
-    <div class="flex flex-row justify-evenly gap-3">
-        <CardCenterLayout>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet.
-        </CardCenterLayout>
-        <CardCenterLayout>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet.
-        </CardCenterLayout>
-    </div>
+<!-- Our button and cockpit area -->
+<SiteLayout title={title}>
+  <div class="relative w-full min-h-screen bg-no-repeat bg-cover bg-center overflow-hidden"
+       style="background-image: url('/assets/beamngcockpit.png');"
+       id="heroSection">
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+
+    <img src="/assets/engineButton.png" alt="Start Engine Button"
+         id="startStopButton"
+         class="cursor-pointer absolute right-4 bottom-4 w-32 h-32 transition-all duration-300 ease-in-out
+                hover:-translate-y-1 hover:shadow-lg
+                active:translate-y-1 active:shadow-sm"/>
+  </div>
+
+  <!-- About Section -->
+  <section class="py-20 bg-gray-100">
+      <div class="container mx-auto px-6">
+          <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Über Uns</h2>
+          <p class="text-gray-600 text-base text-center">
+              Wir sind Uni Bremen studierenden.
+          </p>
+      </div>
+  </section>
 </SiteLayout>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const heroSection = document.getElementById('heroSection');
+  const startButton = document.getElementById('startStopButton');
+
+  if (startButton && heroSection) {
+    startButton.addEventListener('click', function() {
+      // Used Tailwind's configured animation
+      heroSection.classList.add('animate-zoomin');
+
+      setTimeout(() => {
+        // Navigation to aufgabe page after the zoom effect
+        window.location.href = '/aufgabe';  
+      }, 800);  
+    });
+  } else {
+    console.error('Start button or hero section not found');
+  }
+});
+</script>

@@ -1,63 +1,33 @@
----
-const { title } = Astro.props;
-import Header from "../components/header.astro";
-import "@fontsource/poppins";
----
+    ---
+    const { title } = Astro.props;
+    import Header from "../components/header.astro";
+    import "@fontsource/poppins";
+    ---
 
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en" class="h-full">
     <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{title}</title>
+        <link rel="stylesheet" href="/styles/global.css" />
     </head>
-    <body class="bg-background2">
-        <Header [title]="title" />
-        <div class="absolute mt-52">
-            <svg
-                width="585"
-                height="475"
-                viewBox="0 0 585 475"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <style>
-                    @keyframes colorChange1 {
-                        0%,
-                        100% {
-                            fill: #ff6600;
-                        }
-                        50% {
-                            fill: rgb(34,112,30);
-                        }
-                    }
-
-                    path {
-                        animation: colorChange1 8s infinite linear;
-                    }
-                </style>
-                <path
-                    d="M59.6878 70.4072C2.64247 112.7 -16.8108 220.14 15.7866 303.15C34.714 338.439 85.6079 417.473 137.764 451.308C202.958 493.601 346.492 482.305 380.666 392.728C414.841 303.151 608.848 251.138 582.56 142.122C556.271 33.1053 429.562 31.2664 323.621 6.83623C217.68 -17.5939 116.733 28.1141 59.6878 70.4072Z"
-                    fill="#B071FF"></path>
-            </svg>
-        </div>
-        <main class="h-full flex flex-col items-center gap-10">
+    <body class="bg-gray-100 font-sans leading-normal tracking-normal h-full">
+        <Header />
+        <main class="h-full">
             <slot />
         </main>
+        <footer class="text-center text-sm py-6">
+            © 2024 Astro. All rights reserved.
+        </footer>
     </body>
-</html>
+    </html>
 
-<style>
-    body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    <style>
+    html, body {
+        width: 100%;
         height: 100%;
+        margin: 0;
+        padding: 0;
     }
-
-    svg {
-        filter: blur(100px);
-    }
-</style>
+    </style>
