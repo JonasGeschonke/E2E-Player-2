@@ -1,15 +1,8 @@
 ---
 import SiteLayout from "./siteLayout.astro";
-import Hero from "../components/hero.astro";
-import CardJumbotron from "../components/cards/card-jumbotron.astro";
 ---
 
 <SiteLayout title="E2E-Player #2 | Home">
-    <section>
-        <Hero />
-        <CardJumbotron />
-    </section>
-    <section>
-        <slot />
-    </section>
+    <slot name="hero" />
+    <slot name="content"/>
 </SiteLayout>

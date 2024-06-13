@@ -1,10 +1,15 @@
 <script lang="ts">
   // import { supabase } from "../../lib/subabase";
   import { createClient } from "@supabase/supabase-js";
-  const supabase = createClient(
-    "https://tzxvonzxzpbbcvqqlfio.supabase.co",
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR6eHZvbnp4enBiYmN2cXFsZmlvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDE5NTA4MzAsImV4cCI6MjAxNzUyNjgzMH0.j5CgTim-mv04NXfjCiQHlrb-9XB81ZpvEJw-61NBEXw",
+
+  export let supabase_url: string;
+  export let anon_key: string;
+
+  let supabase = createClient(
+    supabase_url,
+    anon_key,
   );
+
   let records: any[] = [];
   let prom = loadRecords();
 

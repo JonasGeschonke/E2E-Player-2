@@ -5,6 +5,10 @@ on:
   pull_request:
     branches: master
 
+env:
+  SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+  SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+
 jobs:
   deploy:
     name: Deploy

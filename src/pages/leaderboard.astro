@@ -2,7 +2,9 @@
 import List from "../components/leaderboard/list.svelte";
 import LeaderboardLayout from "../layouts/leaderboardLayout.astro";
 
+const supabase_url = import.meta.env.SUPABASE_URL;
+const anon_key = import.meta.env.SUPABASE_ANON_KEY;
 ---
 <LeaderboardLayout>
-    <List client:visible></List>
+    <List supabase_url={supabase_url} anon_key={anon_key} client:load></List>
 </LeaderboardLayout>

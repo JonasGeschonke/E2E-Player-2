@@ -1,6 +1,17 @@
 ---
+import CardJumbotron from "../components/cards/card-jumbotron.astro";
+import Carousel from "../components/carousel.astro";
+import Hero from "../components/hero.astro";
 import HomeLayout from "../layouts/homeLayout.astro";
 
 const title = "E2E-Player #2";
 ---
-<HomeLayout></HomeLayout>
+<HomeLayout>
+    <section slot="hero">
+        <Hero />
+        <Carousel />
+    </section>
+    <section slot="content">
+        <CardJumbotron />
+    </section>
+</HomeLayout>
