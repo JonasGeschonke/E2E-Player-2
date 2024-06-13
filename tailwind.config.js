@@ -1,22 +1,83 @@
 import defaultTheme from 'tailwindcss/defaultTheme'
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}', './node_modules/flowbite/**/*.js'],
   theme: {
     extend: {
       colors: {
-        'text': '#f2ece8',
-        'background': '#0e0906',
-        'background2': '#2B1C13',
-        'primary': '#d5ac90',
-        'secondary': '#ff6600',
-        'accent': '#ec9155',
-        'accent-green': 'rgb(34,112,30)'
-      },
+        'text': {
+          50: 'rgb(14, 13, 12)',
+          100: 'rgb(27, 26, 24)',
+          200: 'rgb(54, 51, 48)',
+          300: 'rgb(81, 77, 72)',
+          400: 'rgb(108, 102, 96)',
+          500: 'rgb(135, 128, 120)',
+          600: 'rgb(159, 153, 147)',
+          700: 'rgb(183, 179, 174)',
+          800: 'rgb(207, 204, 201)',
+          900: 'rgb(231, 230, 228)',
+          950: 'rgb(243, 242, 241)',
+        },
+        'background': {
+          50: 'rgb(24, 12, 2)',
+          100: 'rgb(48, 24, 3)',
+          200: 'rgb(95, 48, 7)',
+          300: 'rgb(143, 72, 10)',
+          400: 'rgb(191, 96, 13)',
+          500: 'rgb(238, 120, 17)',
+          600: 'rgb(242, 147, 64)',
+          700: 'rgb(245, 174, 112)',
+          800: 'rgb(248, 201, 160)',
+          900: 'rgb(252, 228, 207)',
+          950: 'rgb(253, 242, 231)',
+        },
+        'primary': {
+          50: 'rgb(20, 11, 5)',
+          100: 'rgb(41, 22, 10)',
+          200: 'rgb(81, 45, 21)',
+          300: 'rgb(122, 67, 31)',
+          400: 'rgb(162, 90, 42)',
+          500: 'rgb(203, 112, 52)',
+          600: 'rgb(213, 141, 93)',
+          700: 'rgb(224, 169, 133)',
+          800: 'rgb(234, 198, 174)',
+          900: 'rgb(245, 226, 214)',
+          950: 'rgb(250, 241, 235)',
+        },
+        'secondary': {
+          50: 'rgb(25, 10, 1)',
+          100: 'rgb(49, 21, 2)',
+          200: 'rgb(99, 41, 3)',
+          300: 'rgb(148, 62, 5)',
+          400: 'rgb(198, 83, 6)',
+          500: 'rgb(247, 104, 8)',
+          600: 'rgb(249, 134, 57)',
+          700: 'rgb(250, 164, 107)',
+          800: 'rgb(252, 194, 156)',
+          900: 'rgb(253, 225, 206)',
+          950: 'rgb(254, 240, 230)',
+        },
+        'accent': {
+          50: 'rgb(14, 19, 7)',
+          100: 'rgb(28, 38, 13)',
+          200: 'rgb(57, 75, 27)',
+          300: 'rgb(85, 113, 40)',
+          400: 'rgb(113, 151, 53)',
+          500: 'rgb(142, 189, 66)',
+          600: 'rgb(164, 202, 104)',
+          700: 'rgb(187, 215, 142)',
+          800: 'rgb(210, 228, 180)',
+          900: 'rgb(232, 242, 217)',
+          950: 'rgb(244, 248, 236)',
+        },
+       },
+       
       fontFamily: {
-        sans: ['Poppins', ...defaultTheme.fontFamily.sans]
+        sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+        'segoe': ['Segoe UI'],
+        'noto': ['Noto Sans']
       }
     },
   },
-  plugins: [],
+  plugins: [require('flowbite/plugin')],
 };
