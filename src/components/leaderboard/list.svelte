@@ -8,11 +8,11 @@
     time: string;
   }
   
-  console.assert(process.env.PUBLIC_SUPABASE_URL);
-  console.assert(process.env.PUBLIC_SUPABASE_SERVICE_KEY);
+  console.log(import.meta.env.PUBLIC_SUPABASE_URL);
+  console.log(import.meta.env.PUBLIC_SUPABASE_SERVICE_KEY);
 
-  let supabase_url = process.env.PUBLIC_SUPABASE_URL || "";
-  let supabase_key = process.env.PUBLIC_SUPABASE_SERVICE_KEY || "";
+  let supabase_url = import.meta.env.PUBLIC_SUPABASE_URL || "";
+  let supabase_key = import.meta.env.PUBLIC_SUPABASE_SERVICE_KEY || "";
 
   let supabase = createClient(supabase_url,supabase_key);
 
