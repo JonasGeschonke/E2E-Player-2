@@ -22,8 +22,10 @@ const { name, role, socials, img, portrait } = Astro.props;
             />
         ) : (
             <img
-                class="mx-auto mb-4 w-36 h-36 rounded-full"
+                class="mx-auto object-cover mb-4 w-36 h-36 rounded-full"
                 src={img}
+                width="500px"
+                height="500px"
                 alt={name + " - Avatar"}
             />
         )

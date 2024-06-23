@@ -5,7 +5,7 @@
 <div
     class="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-background-800 border border-background-800 rounded-full bottom-4 left-1/2 dark:bg-gray-700 dark:border-gray-600"
 >
-    <div class="grid h-full max-w-lg grid-cols-5 mx-auto">
+    <div class="grid h-full w-full max-w-lg grid-cols-4 mx-auto">
         <!-- Home -->
         <button
             data-tooltip-target="tooltip-home"
@@ -66,39 +66,6 @@
             class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
         >
             Team
-            <div class="tooltip-arrow" data-popper-arrow></div>
-        </div>
-        <!-- New Entry -->
-        <div class="flex items-center justify-center">
-            <button
-                data-tooltip-target="tooltip-new"
-                data-modal-target="entry-modal" data-modal-toggle="entry-modal"
-                type="button"
-                class="inline-flex items-center justify-center w-10 h-10 font-medium bg-primary-500 rounded-full hover:bg-primary-600 group focus:ring-4 focus:ring-primary-400 focus:outline-none dark:focus:ring-primary-800"
-            >
-                <svg
-                    class="w-4 h-4 text-text-950"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 18 18"
-                >
-                    <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M9 1v16M1 9h16"></path>
-                </svg>
-                <span class="sr-only">New item</span>
-            </button>
-        </div>
-        <div
-            id="tooltip-new"
-            role="tooltip"
-            class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
-        >
-            Create new item
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
         <!-- Leaderboard -->

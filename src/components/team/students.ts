@@ -6,11 +6,10 @@ export const students: Member[] = [
         role: "Master Student",
         img: "/team/jonas.jpeg",
         socials: [
-            { url: "https://github.com/jonasgeschonke", icon: "github" },
             {
                 url: "https://www.linkedin.com/in/jonasgeschonke/",
                 icon: "linkedin",
-            },
+            }, { url: "https://github.com/jonasgeschonke", icon: "github" },
         ],
         portrait: false,
     },
@@ -38,8 +37,8 @@ export const students: Member[] = [
     {
         name: "Alpay Yildiray",
         role: "Master Student",
-        img: "/team/halvar-grav.png",
-        socials: [],
+        img: "/team/alpay.jpg",
+        socials: [{ url: "www.linkedin.com/in/alpay-yildiray", icon: "linkedin" }],
         portrait: false,
     },
     {
@@ -66,11 +65,11 @@ export const students: Member[] = [
     {
         name: "Max Petendra",
         role: "Master Student",
-        img: "/team/max-p.png",
+        img: "/team/max-p.jpg",
         socials: [
-            {url: "https://www.linkedin.com/in/max-petendra-021765272/", icon: "linkedin"}
+            { url: "https://www.linkedin.com/in/max-petendra-021765272/", icon: "linkedin" }
         ],
-        portrait: true
+        portrait: false
     },
     {
         name: "Onat Can Vardareri",

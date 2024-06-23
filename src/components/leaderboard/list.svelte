@@ -8,8 +8,6 @@
     time: string;
   }
   
-  // ddp_t1TbZyvP4Ohig7czJjTaOE64Cf3mwe3Um7MN
-
   let supabase_url = import.meta.env.PUBLIC_SUPABASE_URL || "";
   let supabase_key = import.meta.env.PUBLIC_SUPABASE_SERVICE_KEY || "";
 

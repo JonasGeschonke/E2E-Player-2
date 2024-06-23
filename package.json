@@ -11,7 +11,8 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "deno-deploy": "deployctl deploy --project=e2e-player --no-static --include=./dist ./dist/server/entry.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",

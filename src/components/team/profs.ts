@@ -5,20 +5,20 @@ export const professors: Member[] = [
         role: "Head of Autonomous Systems",
         img: "/team/joachim.jpg",
         socials: [],
-        portrait: true
+        portrait: false
     },
     {
-        name: "DR. Christoph Zetzsche",
+        name: "Dr. Christoph Zetzsche",
         role: "Head of Computations Vision and Multisensory PR.",
-        img: "/team/halvar.png",
+        img: "/team/christoph.jpg",
         socials: [],
-        portrait: true
+        portrait: false
     },
     {
         name: "Jonas Krumme",
-        role: "Wissenschaftlicher Mitarbeiter",
-        img: "/team/halvar.png",
+        role: "Research Assistant",
+        img: "/team/jkrumme.jpg",
         socials: [],
-        portrait: true
+        portrait: false
     },
 ];
