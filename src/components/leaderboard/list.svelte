@@ -7,11 +7,14 @@
     num_laps: number;
     time: string;
   }
+  
+  console.assert(import.meta.env.PUBLIC_SUPABASE_URL);
+  console.assert(import.meta.env.PUBLIC_SUPABASE_SERVICE_KEY);
 
-  let supabase = createClient(
-    import.meta.env.PUBLIC_SUPABASE_URL || '',
-    import.meta.env.PUBLIC_SUPABASE_SERVICE_KEY || '',
-  );
+  let supabase_url = import.meta.env.PUBLIC_SUPABASE_URL || "";
+  let supabase_key = import.meta.env.PUBLIC_SUPABASE_SERVICE_KEY || "";
+
+  let supabase = createClient(supabase_url,supabase_key);
 
   async function fetchData(): Promise<{ data: any; error: any }> {
     return await supabase
