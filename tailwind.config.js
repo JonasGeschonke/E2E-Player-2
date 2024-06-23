@@ -70,12 +70,10 @@ export default {
           900: 'rgb(232, 242, 217)',
           950: 'rgb(244, 248, 236)',
         },
-       },
-       
+      },
+
       fontFamily: {
-        sans: ['Poppins', ...defaultTheme.fontFamily.sans],
-        'segoe': ['Segoe UI'],
-        'noto': ['Noto Sans']
+        sans: [...defaultTheme.fontFamily.sans],
       }
     },
   },

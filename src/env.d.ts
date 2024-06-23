@@ -1,10 +1,15 @@
+/// <reference types="astro/client" />
 /// <reference path="../.astro/types.d.ts" />
-// <reference types="astro/client" />
-interface ImportMetaEnv {
-  readonly SUPABASE_URL: string
-  readonly SUPABASE_ANON_KEY: string
+
+export interface Social {
+    url: string,
+    icon: string
 }
 
-interface ImportMeta {
-  readonly env: ImportMetaEnv
+export interface Member {
+    name: string,
+    role: string,
+    img: string,
+    socials: Social[],
+    portrait: boolean
 }

@@ -5,6 +5,24 @@ import EntryModal from "../components/leaderboard/entry-modal.astro";
 import Navigation from "../components/navigation.astro";
 import Footer from "../components/footer.astro";
 import "@fontsource/poppins";
+
+if (Astro.request.method === "POST") {
+    console.log("form submitted");
+    try {
+        const data = await Astro.request.formData();
+        const name = data.get("name");
+        const time = data.get("time");
+        const num_laps = data.get("num_laps");
+        const email = data.get("email");
+
+        console.log({ name, time, num_laps, email });
+        // Do something with the data
+    } catch (error) {
+        if (error instanceof Error) {
+            console.error(error.message);
+        }
+    }
+}
 ---
 
 <html lang="en">
@@ -19,6 +37,7 @@ import "@fontsource/poppins";
         <div
             class="bg-[url('/grid.svg')] bg-cover bg-center bg-no-repeat min-h-screen"
         >
+            <Header />
             <Navigation />
             <EntryModal />
             <slot />
@@ -26,6 +45,10 @@ import "@fontsource/poppins";
                 is:inline
                 src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
             ></script>
+        </div>
+        <div
+            class="bg-gradient-to-b from-background-700 to-transparent dark:from-blue-900 w-full h-3/6 absolute top-0 left-0 z-0"
+        >
         </div>
     </body>
     <Footer />

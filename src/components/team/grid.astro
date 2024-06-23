@@ -1,28 +1,56 @@
 ---
+import type { Social, Member } from "../../env";
+import { students } from "./students.ts"
+import { professors } from "./profs.ts"
 import MemberCard from "./member-card.astro";
 
-
+const studentsList: Member[] = students.sort((a,b) => a.name.localeCompare(b.name));
+const profsList: Member[] = professors;
 ---
 
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mx-5 mb-5">
-    <div class="grid gap-4">
-        <MemberCard />
-        <MemberCard />
-        <MemberCard />
+<section class="z-20">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
+        <div
+            class="p-6 bg-background-900/65 border border-background-900/65 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+            <h2
+                class="mb-10 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+            >
+                Our team
+            </h2>
+            <div
+                class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3"
+            >
+                {
+                    profsList.map((professor) => (
+                        <MemberCard
+                            name={professor.name}
+                            role={professor.role}
+                            img={professor.img}
+                            socials={professor.socials}
+                            portrait={professor.portrait}
+                        />
+                    ))
+                }
+            </div>
+            <hr
+                class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-text-500 to-transparent opacity-25"
+            />
+            <div
+                class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+            >
+                {
+                    studentsList.map((student) => (
+                        <MemberCard
+                            name={student.name}
+                            role={student.role}
+                            img={student.img}
+                            socials={student.socials}
+                            portrait={student.portrait}
+                        />
+                    ))
+                }
+            </div>
+        </div>
     </div>
-    <div class="grid gap-4">
-        <MemberCard />
-        <MemberCard />
-        <MemberCard />
-    </div>
-    <div class="grid gap-4">
-        <MemberCard />
-        <MemberCard />
-        <MemberCard />
-    </div>
-    <div class="grid gap-4">
-        <MemberCard />
-        <MemberCard />
-        <MemberCard />
-    </div>
-</div>
+</section>
