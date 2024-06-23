@@ -9,8 +9,8 @@
   }
 
   let supabase = createClient(
-    import.meta.env.PUBLIC_SUPABASE_URL,
-    import.meta.env.PUBLIC_SUPABASE_SERVICE_KEY,
+    import.meta.env.PUBLIC_SUPABASE_URL || '',
+    import.meta.env.PUBLIC_SUPABASE_SERVICE_KEY || '',
   );
 
   async function fetchData(): Promise<{ data: any; error: any }> {
