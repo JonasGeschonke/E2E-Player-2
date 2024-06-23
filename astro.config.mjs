@@ -21,7 +21,7 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'server',
+  output: 'hybrid',
   adapter: deno(),
   image: {
     service: passthroughImageService()
@@ -29,7 +29,8 @@ export default defineConfig({
   integrations: [svelte(), tailwind(), mdx(), sitemap(), icon()],
   vite: {
     define: {
-      SUPABASE_URL: JSON.stringify(process.env.APP_ENV),
+      SUPABASE_URL: JSON.stringify(process.env.PUBLIC_SUPABASE_URL),
+      SUPABASE_SERVICE_KEY: JSON.stringify(process.env.PUBLIC_SUPABASE_SERVICE_KEY)
     }
   }
 });
