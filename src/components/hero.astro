@@ -17,9 +17,23 @@
             > fast.
         </h1>
         <p
-            class="mb-8 text-lg font-normal text-text-300 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-200"
+            class="mb-8 text-xl font-normal text-text-300 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-200"
         >
-            Subtitle text
+            Join us on the <a href="https://maps.app.goo.gl/tfJ37CeLNM7JFDMs7"><span class="bg-gradient-to-tr to-accent-700/95 from-accent-400/95 font-bold text-white border-none border-transparent p-2 pr-1 rounded-lg transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 hover:bg-accent-300/85 duration-300">28th June 2024 (10:00 - 16:00) MZH Uni Bremen</span></a> to see it in person.
         </p>
     </div>
 </section>
+
+<style>
+    .highlight::after {
+        content: "";
+        height: 50%;
+        width: 100%;
+        display: block;
+        z-index: -5;
+        opacity: 30%;
+        position: absolute;
+        transition: all 0.3s ease;
+        background: linear-gradient(180deg, transparent 50%, var(--accent) 50%);
+    }
+</style>

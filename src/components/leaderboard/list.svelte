@@ -17,6 +17,7 @@
     return await supabase
       .from("record")
       .select("*")
+      .eq("time_trial", false)
       .order("time", { ascending: true });
   }
 
@@ -383,9 +384,17 @@
                 <div
                   class="w-2/6 flex flex-row gap-4 content-center items-center"
                 >
-                  <h5 class="text-2xl text-text-200 font-semibold">
-                    {podium_val.name}
-                  </h5>
+                  {#if podium_val.ai === true}
+                    <h5
+                      class="text-2xl text-transparent bg-clip-text bg-gradient-to-br to-accent-600/85 from-accent-400/85 font-[800]"
+                    >
+                      {podium_val.name}
+                    </h5>
+                  {:else}
+                    <h5 class="text-2xl text-text-200 font-semibold">
+                      {podium_val.name}
+                    </h5>
+                  {/if}
                 </div>
                 <div
                   class="w-3/6 flex flex-row justify-end justify-items-start"
@@ -423,9 +432,17 @@
                 <div
                   class="w-2/6 flex flex-row gap-4 content-center items-center"
                 >
-                  <h5 class="text-2xl text-text-200 font-semibold">
-                    {val.name}
-                  </h5>
+                  {#if val.ai === true}
+                    <h5
+                      class="text-2xl text-transparent bg-clip-text bg-gradient-to-br to-accent-600/85 from-accent-400/85 font-[800]"
+                    >
+                      {val.name}
+                    </h5>
+                  {:else}
+                    <h5 class="text-2xl text-text-200 font-semibold">
+                      {val.name}
+                    </h5>
+                  {/if}
                 </div>
                 <div
                   class="w-3/6 flex flex-row justify-end justify-items-start"
