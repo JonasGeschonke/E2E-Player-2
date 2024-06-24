@@ -7,11 +7,11 @@
     num_laps: number;
     time: string;
   }
-  
+
   let supabase_url = import.meta.env.PUBLIC_SUPABASE_URL || "";
   let supabase_key = import.meta.env.PUBLIC_SUPABASE_SERVICE_KEY || "";
 
-  let supabase = createClient(supabase_url,supabase_key);
+  let supabase = createClient(supabase_url, supabase_key);
 
   async function fetchData(): Promise<{ data: any; error: any }> {
     return await supabase
@@ -363,6 +363,43 @@
             </div>
           </div>
         </div>
+        <div class="block md:hidden lg:hidden">
+          {#each data["data"].slice(0, 3) as podium_val, index}
+            <div
+              class="w-full p-6 mb-1.5 bg-secondary-800/65 border border-secondary-900 rounded-lg shadow"
+            >
+              <div
+                class="flex flex-row justify-start items-center content-center gap-3"
+              >
+                <div class="w-1/6 flex flex-row gap-3">
+                  <h4
+                    class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr to-accent-400 via-accent-600 from-accent-500"
+                  >
+                    #{index + 1}
+                  </h4>
+                  <span class="border-r-2 rounded-md border border-primary-600"
+                  ></span>
+                </div>
+                <div
+                  class="w-2/6 flex flex-row gap-4 content-center items-center"
+                >
+                  <h5 class="text-2xl text-text-200 font-semibold">
+                    {podium_val.name}
+                  </h5>
+                </div>
+                <div
+                  class="w-3/6 flex flex-row justify-end justify-items-start"
+                >
+                  <div class="flex flex-col justify-start">
+                    <p class="text-xl text-text-200 font-semibold text-left">
+                      {convertSecondsToString(podium_val.time)}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {/each}
+        </div>
         <hr
           class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-text-500 to-transparent opacity-25"
         />
@@ -384,7 +421,7 @@
                   ></span>
                 </div>
                 <div
-                  class="w-2/6 flex flex-row gap-8 content-center items-center"
+                  class="w-2/6 flex flex-row gap-4 content-center items-center"
                 >
                   <h5 class="text-2xl text-text-200 font-semibold">
                     {val.name}
@@ -393,7 +430,7 @@
                 <div
                   class="w-3/6 flex flex-row justify-end justify-items-start"
                 >
-                  <div class="w-2/6 flex flex-col justify-start">
+                  <div class="flex flex-col justify-start">
                     <p class="text-xl text-text-200 font-semibold text-left">
                       {convertSecondsToString(val.time)}
                     </p>

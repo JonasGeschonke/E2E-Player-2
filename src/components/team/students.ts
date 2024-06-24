@@ -30,8 +30,10 @@ export const students: Member[] = [
     {
         name: "Max Miehe",
         role: "Master Student",
-        img: "/team/halvar-grav.png",
-        socials: [{ url: "https://github.com/mensch2134", icon: "github" }],
+        img: "/team/max-m.jpg",
+        socials: [{ url: "https://github.com/mensch2134", icon: "github" }, {
+            url: "https://www.linkedin.com/in/max-miehe-bb87b026a", icon: "linkedin",
+        }],
         portrait: false,
     },
     {
