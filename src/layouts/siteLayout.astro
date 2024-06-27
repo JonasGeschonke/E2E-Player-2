@@ -1,11 +1,10 @@
 ---
-const { title } = Astro.props;
+const { title, gradient, overrideHeader } = Astro.props;
 import Header from "../components/header.astro";
 import EntryModal from "../components/leaderboard/entry-modal.astro";
 import Navigation from "../components/navigation.astro";
 import Footer from "../components/footer.astro";
 import "@fontsource/poppins";
-
 ---
 
 <html lang="en">
@@ -20,7 +19,7 @@ import "@fontsource/poppins";
         <div
             class="bg-[url('/grid.svg')] bg-cover bg-center bg-no-repeat min-h-screen"
         >
-            <Header />
+            {!overrideHeader && <Header />}    
             <Navigation />
             <EntryModal />
             <slot />
@@ -29,10 +28,11 @@ import "@fontsource/poppins";
                 src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
             ></script>
         </div>
-        <div
-            class="bg-gradient-to-b from-background-700 to-transparent dark:from-blue-900 w-full h-3/6 absolute top-0 left-0 z-0"
-        >
-        </div>
+        {
+            gradient && (
+                <div class="bg-gradient-to-b from-background-700 to-transparent dark:from-blue-900 w-full h-3/6 absolute top-0 left-0 z-0" />
+            )
+        }
     </body>
     <Footer />
 </html>

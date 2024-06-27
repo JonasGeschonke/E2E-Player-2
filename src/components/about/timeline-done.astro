@@ -1,0 +1,160 @@
+---
+import TimelineElem from "./timeline-elem.astro";
+---
+
+<ol class="relative border-s-2 md:ml-8 lg:ml-16 border-primary-700">
+    <TimelineElem icon="done">
+        <h3
+            slot="title"
+            class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white"
+        >
+            Build Gymnasium Environment for BeamNG.tech
+        </h3>
+        <p
+            slot="description"
+            class="text-justify font-normal text-text-200"
+        >
+            An Environment that allows us to use <a class="underline text-accent-500" href="https://github.com/Farama-Foundation/Gymnasium">Gymnasium</a> and <a href="https://beamng.tech/" class="underline text-accent-500">BeamNG.tech</a> together, so we can gather observations and perform steps asynchronously.
+        </p>
+    </TimelineElem>
+    <TimelineElem icon="done">
+        <h3
+            slot="title"
+            class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white"
+        >
+            Started experimenting with Behaivour Cloning / Imitation Learning Approaches
+        </h3>
+        <p
+            slot="description"
+            class="text-justify font-normal text-text-200"
+        >
+            We implemented, trained and evaluated several different approaches for behaviour cloning, including <a class="underline text-accent-500" href="https://arxiv.org/abs/1011.0686">Dagger</a>, <a class="underline text-accent-500" href="https://arxiv.org/abs/1606.03476">Gail</a>, aswell as general CNN approaches.
+        </p>
+    </TimelineElem>
+    <TimelineElem icon="done">
+        <h3
+            slot="title"
+            class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white"
+        >
+            Used the In-Game 'AI' to generate training Datasets
+        </h3>
+        <p
+            slot="description"
+            class="text-justify font-normal text-text-200"
+        >
+            We developed a way to harness the available in-game AI to generate larger training datasets in less time, compared to human controlled / generated datasets.
+        </p>
+    </TimelineElem>
+    <TimelineElem icon="done">
+        <h3
+            slot="title"
+            class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white"
+        >
+            Experiments with several different Approaches of Behaivour Cloning, Reinforcement Learning and End-to-End Data Aquisition
+        </h3>
+        <p
+            slot="description"
+            class="text-justify font-normal text-text-200"
+        >
+            Continued experimentation with different approaches including DQN, Segmentation, Frame Stacking and more.
+        </p>
+    </TimelineElem>
+    <TimelineElem icon="done">
+        <h3
+            slot="title"
+            class="flex items-center mb-1 text-lg font-semibold text-gray-900"
+        >
+            Developed Reinforcement Learning Approach
+        </h3>
+        <p
+            slot="description"
+            class="text-justify font-normal text-text-200"
+        >
+            Our approach uses the <a class="underline text-accent-500" href="https://arxiv.org/abs/1801.01290">Soft-Actor-Critic architecture</a> to train an agent on several in-game attributes.
+        </p>
+    </TimelineElem>
+    <TimelineElem icon="done">
+        <h3
+            slot="title"
+            class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white"
+        >
+            Testing an End-to-End Reinforcement Learning Approach
+        </h3>
+        <p
+            slot="description"
+            class="text-justify font-normal text-text-200"
+        >
+            We investigated how adding the current image to the observations can improve the performance of the Soft-Actor-Critic Agent.
+        </p>
+    </TimelineElem>
+    <TimelineElem icon="done">
+        <h3
+            slot="title"
+            class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white"
+        >
+            Convolutional Neural Network to generate Road Curvatures out of Images
+        </h3>
+        <p
+            slot="description"
+            class="text-justify font-normal text-text-200"
+        >
+            The networks purpose is to generate a part of the needed inputs to the Soft-Actor-Critic Agent from an image, instead of using the in-game data.
+        </p>
+    </TimelineElem>
+    <TimelineElem icon="done">
+        <h3
+            slot="title"
+            class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white"
+        >
+            Convolutional Neural Network to generate Rangefinders out of Images
+        </h3>
+        <p
+            slot="description"
+            class="text-justify font-normal text-text-200"
+        >
+            Much like the Road Curvatures, the networks purpose is to generate a part of the needed inputs to the Soft-Actor-Critic Agent from an image, instead of using the in-game data.
+        </p>
+    </TimelineElem>
+    <TimelineElem icon="done">
+        <h3
+            slot="title"
+            class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white"
+        >
+            Convolutional Neural Network to generate Speed / Acceleration vectors out of Images of the UI
+        </h3>
+        <p
+            slot="description"
+            class="text-justify font-normal text-text-200"
+        >
+            Reading out parts of the UI to get current speed and acceleration for the Soft-Actor-Critic Agent.
+        </p>
+    </TimelineElem>
+    <TimelineElem icon="not-done">
+        <h3
+            slot="title"
+            class="flex flex-col md:flex-col lg:flex-row items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white"
+        >
+            <span class="text-accent-500 pr-1">[In Devolopment]</span> Retrain the Soft-Actor-Critic Agent with the new Inputs generated from the different Networks
+        </h3>
+        <p
+            slot="description"
+            class="text-justify font-normal text-text-200"
+        >
+            We're investigating whether retraining the Soft-Actor-Critic Agent with the new inputs, generated from the different networks, will equal or improve the performance of the Agent.
+        </p>
+    </TimelineElem>
+    <TimelineElem icon="not-done">
+        <h3
+            slot="title"
+            class="flex flex-col md:flex-col lg:flex-row items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white"
+        >
+            <span class="text-accent-500 pr-1">[In Devolopment]</span> Building a final End-to-End Network with the Soft-Actor-Critic Agent 
+        </h3>
+        <p
+            slot="description"
+            class="text-justify font-normal text-text-200"
+        >
+            Finalizing our End-to-End Network, by combining all of the previously mentioned parts into a single network, that takes an image as input and outputs the needed controls for the Game.
+        </p>
+    </TimelineElem>
+</ol>

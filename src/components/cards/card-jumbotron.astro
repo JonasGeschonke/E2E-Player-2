@@ -1,14 +1,52 @@
 ---
-import SimpleCard from "./simple-cards/simple-card.astro"
-import FullscreenCard from "./simple-cards/fullscreen-card.astro"
+import SimpleCard from "./simple-cards/simple-card.astro";
+import FullscreenCard from "./simple-cards/fullscreen-card.astro";
 ---
 
 <section class="">
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
         <FullscreenCard />
         <div class="grid md:grid-cols-2 gap-8">
-            <SimpleCard />
-            <SimpleCard />
+            <SimpleCard>
+                <p slot="text">
+                    The computer science master's project E2E Player #2 is a
+                    continuation of a bachelor's project from last year. In the
+                    previous project, self-driving agents were developed for the
+                    racing game SuperTuxKart, a game with similarities to Mario
+                    Kart. The master's project is working with BeamNG instead.
+                    This programme uses soft-body physics, which enables a very
+                    realistic driving simulation. This increases the complexity
+                    of developing self-driving agents compared to using a
+                    simpler racing game. The aim is to develop agents that can
+                    drive around a race track as quickly and accident-free as
+                    possible.
+                </p>
+            </SimpleCard>
+            <SimpleCard>
+                <p slot="text">
+                    The aim of this project is to realise such agents using
+                    end-to-end learning. This is a variant of machine learning
+                    in which individual modules or neural networks are not
+                    developed and then brought together to solve an application
+                    task. Instead, a single trained model should directly output
+                    the solution to the respective task based on the available
+                    input. This is usually made possible by using deep neural
+                    networks, which can also learn to master complex tasks.
+                </p>
+                <p>
+                    For this master project, the end-to-end methodology is also
+                    interpreted in such a way that the agent should not receive
+                    more information about the state of the racing game than a
+                    human player has at their disposal. This objective has been
+                    difficult to fulfil so far and is something that is still
+                    being worked on. Among other things, imitation learning was
+                    used in the development of the agents, whereby the agent
+                    attempts to imitate an "expert". However, the really fast
+                    agents were developed using reinforcement learning, whereby
+                    the agent is rewarded for good driving behaviour and
+                    punished for bad behaviour.
+                </p>
+            </SimpleCard>
         </div>
     </div>
 </section>

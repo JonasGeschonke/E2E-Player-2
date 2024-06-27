@@ -3,6 +3,7 @@ import type { Social, Member } from "../../env";
 import { students } from "./students.ts"
 import { professors } from "./profs.ts"
 import MemberCard from "./member-card.astro";
+import Carousel from "../carousel.astro";
 
 const studentsList: Member[] = students.sort((a,b) => a.name.localeCompare(b.name));
 const profsList: Member[] = professors;
@@ -51,6 +52,10 @@ const profsList: Member[] = professors;
                     ))
                 }
             </div>
+            <hr
+                class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-text-500 to-transparent opacity-25"
+            />
+            <Carousel />
         </div>
     </div>
 </section>

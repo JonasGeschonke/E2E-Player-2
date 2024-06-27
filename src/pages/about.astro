@@ -1,9 +1,100 @@
 ---
-import Hero from "../components/hero.astro";
 import AboutLayout from "../layouts/aboutLayout.astro";
-
-
+import SimpleCard from "../components/cards/simple-cards/simple-card.astro";
+import TimelineDone from "../components/about/timeline-done.astro";
 ---
+
 <AboutLayout>
-    <Hero />
+    <!-- <section class="relative z-10">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:px-6">
+            <SimpleCard>
+                <h2
+                    slot="title"
+                    class="mb-10 text-4xl tracking-tight font-extrabold text-gray-900"
+                >
+                    About
+                </h2>
+                <p slot="text" class="text-lg font-normal text-text-200 mb-4">
+                </p>
+            </SimpleCard>
+        </div>
+    </section> -->
+    <section class="relative z-40">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:px-6">
+            <div
+                class="p-6 bg-background-900/75 border border-background-900/65 rounded-lg shadow"
+            >
+                <h2
+                    class="mb-10 text-4xl tracking-tight font-extrabold text-gray-900"
+                >
+                    Project Timeline
+                </h2>
+                <div class="ml-4">
+                    <TimelineDone />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="relative z-10">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:px-6">
+            <div
+                class="p-6 bg-background-900/75 border border-background-900/65 rounded-lg shadow"
+            >
+                <h2
+                    class="mb-10 text-4xl tracking-tight font-extrabold text-gray-900"
+                >
+                    Documentation
+                </h2>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mx-2"
+                >
+                    <a href="#SAC" class="col-span-1 md:col-span-2">
+                        <SimpleCard lightBG class="col-span-1 bg-background-950/45">
+                            <h2
+                                slot="title"
+                                class="mb-5 text-4xl tracking-tight font-extrabold text-gray-900"
+                            >
+                                Soft-Actor-Critic
+                            </h2>
+                            <div slot="text">
+                                <p class="text-lg font-normal text-text-200 mb-4">
+                                    Soft Actor-Critic (SAC) is a reinforcement
+                                    learning algorithm that aims to find a good
+                                    balance between exploring new actions and using
+                                    known, successful actions.
+                                </p>
+                                <h3 class="text-xl font-bold text-text-200 mb-1">Inspiration</h3>
+                                <p class="text-lg font-normal text-text-200 mb-4">
+                                    The inspiration for this approach was the paper
+                                    "Super-Human Performance in Gran Turismo Sport
+                                    Using Deep Reinforcement Learning" (Fuchs et
+                                    al). We adapted the state space used for BeamNG
+                                    to validate the learning procedure and then
+                                    later adapted it for our task.
+                                </p>
+                                <h3 class="text-xl font-bold text-text-200 mb-1">Reward</h3>
+                                <p class="text-lg font-normal text-text-200 mb-4">
+                                    Lap time would be a useful reward, but in
+                                    practice it can only be analysed at the end of a
+                                    lap. So we use the distance between the states
+                                    as a reward.
+                                </p>
+                                <h3 class="text-xl font-bold text-text-200 mb-1">Penalty</h3>
+                                <p class="text-lg font-normal text-text-200 mb-4">
+                                    To discourage crashes and shortcuts, damage to
+                                    the car and time spent off the road are included
+                                    as penalties in the reward.
+                                </p>
+                            </div>
+                        </SimpleCard>
+                    </a>
+                    <!-- <SimpleCard class="col-span-1 bg-background-700/45" />
+                    <SimpleCard class="col-span-1 bg-background-700/45" />
+                    <SimpleCard class="col-span-1 bg-background-700/45" />
+                    <SimpleCard class="col-span-1 bg-background-700/45" />
+                    <SimpleCard class="col-span-1 bg-background-700/45" /> -->
+                </div>
+            </div>
+        </div>
+    </section>
 </AboutLayout>

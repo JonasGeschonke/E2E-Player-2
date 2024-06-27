@@ -1,3 +1,13 @@
+# Deployment
+```
+npm run build
+DENO_DEPLOY_TOKEN=env.var npm run deno-deploy
+deployctl deployments list
+deployctl deployments redeploy --prod new_tag
+deployctl projects show e2e-player  
+```
+
+
 # Astro Starter Kit: Minimal
 
 ```
