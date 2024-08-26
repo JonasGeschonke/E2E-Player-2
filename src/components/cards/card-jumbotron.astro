@@ -3,125 +3,126 @@ import SimpleCard from "./simple-cards/simple-card.astro";
 import FullscreenCard from "./simple-cards/fullscreen-card.astro";
 ---
 
-<section class="">
+<section class="flex">
     <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 py-8 px-4 mx-auto max-w-screen-xl lg:py-16"
+        class="grid z-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 py-8 px-4 mx-auto max-w-screen-xl lg:py-16"
     >
         <div class="col-span-1 md:col-span-2 lg:col-span-2">
             <SimpleCard>
                 <h2
                     slot="title"
-                    class="mb-4 text-3xl font-extrabold tracking-tight leading-none text-text-100 md:text-4xl lg:text-5xl"
+                    class="mb-4 text-3xl font-extrabold tracking-tight leading-none text-transparent bg-clip-text bg-gradient-to-r to-accent-500 from-accent-400 md:text-4xl lg:text-5xl"
                 >
                     Our Goals
                 </h2>
                 <div slot="text">
-                    <ul class="list-disc marker:text-accent-400">
-                        <li
-                            class="mb-1 text-text-200 text-xl font-bold underline decoration-accent-400"
+                    <div class="grid grid-cols-1 gap-2 md:grid-cols-2">
+                        <div
+                            class="md:mr-2 mt-4 p-4 md:p-8 before:block before:rounded-md before:absolute before:-inset-1 before:-skew-y-2 before:bg-gradient-to-tr before:to-accent-700/95 before:from-accent-400/95 relative inline-block"
                         >
-                            Realising self-driving AI in a realistic physics
-                            based game
-                        </li>
-                        <li
-                            class="mb-1 text-text-200 text-xl font-bold underline decoration-accent-400"
+                            <div
+                                class="h-16 relative text-pretty text-white text-xl text-center font-semibold"
+                            >
+                                Realising self-driving AI in a realistic physics
+                                based game
+                            </div>
+                        </div>
+                        <div
+                            class="md:ml-2 mt-4 p-4 md:p-8 before:block before:rounded-md before:absolute before:-inset-1 before:-skew-y-2 md:before:skew-y-2 before:bg-gradient-to-tr before:to-accent-700/95 before:from-accent-400/95 md:before:bg-gradient-to-br md:before:from-accent-700/95 md:before:to-accent-400/95 relative inline-block"
                         >
-                            AI Agents based on End-to-End Learning
-                        </li>
-                        <li
-                            class="mb-1 text-text-200 text-xl font-bold underline decoration-accent-400"
+                            <div
+                                class="h-16 relative text-pretty text-white text-xl text-center font-semibold"
+                            >
+                                Artificial Intelligence Agents based on
+                                End-to-End Learning
+                            </div>
+                        </div>
+                        <div
+                            class="md:mr-2 mt-4 p-4 before:block before:rounded-md before:absolute before:-inset-1 before:-skew-y-2 before:bg-gradient-to-tr before:to-accent-700/95 before:from-accent-400/95 relative inline-block"
                         >
-                            Reliably beat time trial times set by humans
-                        </li>
-                        <li
-                            class="mb-1 text-text-200 text-xl font-bold underline decoration-accent-400"
+                            <div
+                                class="h-16 md:pt-4 relative text-pretty text-white text-xl text-center font-semibold"
+                            >
+                                Reliably beat time trial times set by humans
+                            </div>
+                        </div>
+                        <div
+                            class="md:ml-2 mt-4 p-4 before:block before:rounded-md before:absolute before:-inset-1 before:-skew-y-2 before:bg-gradient-to-tr before:to-accent-700/95 before:from-accent-400/95 md:before:skew-y-2 md:before:bg-gradient-to-br md:before:from-accent-700/95 md:before:to-accent-400/95 relative inline-block"
                         >
-                            Rely on Information available to humans playing the
-                            game
-                        </li>
-                    </ul>
+                            <div
+                                class="h-16 md:pt-4 relative text-pretty text-white text-xl text-center font-semibold"
+                            >
+                                Rely on Information available to humans playing
+                                the game
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </SimpleCard>
         </div>
-        <div class="md:col-span-1 lg:col-span-1">
+        <div class="col-span-1 md:col-span-2 lg:col-span-2">
             <SimpleCard>
                 <h2
                     slot="title"
-                    class="mb-4 text-3xl font-extrabold tracking-tight leading-none text-text-100 md:text-4xl lg:text-5xl"
+                    class="mb-4 text-3xl font-extrabold tracking-tight leading-none text-transparent bg-clip-text bg-gradient-to-r to-accent-500 from-accent-400 md:text-4xl lg:text-5xl"
                 >
                     Technologies
                 </h2>
-                <div slot="text">
-                    <ul class="list-disc marker:text-accent-400">
-                        <li
-                            class="mb-1 text-text-200 text-xl font-bold underline decoration-accent-400"
+                <div slot="text" class="flex flex-col justify-between">
+                    <div class="grid grid-cols-1 gap-2 md:grid-cols-2">
+                        <div
+                            class="md:mr-2 mt-4 p-4 md:p-8 before:block before:rounded-md before:absolute before:-inset-1 before:-skew-y-2 before:bg-gradient-to-tr before:to-accent-700/95 before:from-accent-400/95 relative inline-block"
                         >
-                            BeamNG.drive / BeamNG.tech
-                        </li>
-                        <li
-                            class="mb-1 text-text-200 text-xl font-bold underline decoration-accent-400"
-                        >
-                            Pytorch, Ray, Gymnasium
-                        </li>
-                        <li
-                            class="mb-1 text-text-200 text-xl font-bold underline decoration-accent-400"
-                        >
-                            Soft-Actor-Critic (SAC)
-                        </li>
-                        <li
-                            class="mb-1 text-text-200 text-xl font-bold underline decoration-accent-400"
-                        >
-                            Behavioural Cloning
-                        </li>
-                    </ul>
-                    <a href="/about">
-                        <button
-                            class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br to-accent-700 from-accent-400 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
-                        >
-                            <span
-                                class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-background-900/75 rounded-md group-hover:bg-opacity-0"
+                            <div
+                                class="h-12 relative text-pretty text-white text-xl text-center font-semibold"
                             >
-                                Find out more
-                            </span>
-                        </button>
-                    </a>
-                </div>
-            </SimpleCard>
-        </div>
-        <div class="md:col-span-1 lg:col-span-1">
-            <SimpleCard>
-                <h2
-                    slot="title"
-                    class="mb-4 text-3xl font-extrabold tracking-tight leading-none text-text-100 md:text-4xl lg:text-5xl"
-                >
-                    Try beating our AI <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r to-accent-700 from-accent-400"
-                        >in Person</span
-                    >
-                </h2>
-                <div slot="text">
-                    <ul class="list-disc marker:text-accent-400">
-                        <li
-                            class="mb-1 text-text-200 text-xl font-bold underline decoration-accent-400"
+                                Pytorch, Ray, Gymnasium
+                            </div>
+                        </div>
+                        <div
+                            class="md:ml-2 mt-4 p-4 md:p-8 before:block before:rounded-md before:absolute before:-inset-1 before:-skew-y-2 md:before:skew-y-2 before:bg-gradient-to-tr before:to-accent-700/95 before:from-accent-400/95 md:before:bg-gradient-to-br md:before:from-accent-700/95 md:before:to-accent-400/95 relative inline-block"
                         >
-                            Visit our booth!
-                        </li>
-                        <li
-                            class="mb-1 text-text-200 text-xl font-bold underline decoration-accent-400"
+                            <div
+                                class="h-12 relative text-pretty text-white text-xl text-center font-semibold"
+                            >
+                                BeamNG.tech / BeamNG.drive
+                            </div>
+                        </div>
+                        <div
+                            class="md:mr-2 mt-4 p-4 before:block before:rounded-md before:absolute before:-inset-1 before:-skew-y-2 before:bg-gradient-to-tr before:to-accent-700/95 before:from-accent-400/95 relative inline-block"
                         >
-                            Top the leaderboard!
-                        </li>
-                        <li
-                            class="mb-1 text-text-200 text-xl font-bold underline decoration-accent-400"
+                            <div
+                                class="h-16 md:pt-4 relative text-pretty text-white text-xl text-center font-semibold"
+                            >
+                                Soft-Actor-Critic (SAC)
+                            </div>
+                        </div>
+                        <div
+                            class="md:ml-2 mt-4 p-4 before:block before:rounded-md before:absolute before:-inset-1 before:-skew-y-2 before:bg-gradient-to-tr before:to-accent-700/95 before:from-accent-400/95 md:before:skew-y-2 md:before:bg-gradient-to-br md:before:from-accent-700/95 md:before:to-accent-400/95 relative inline-block"
                         >
-                            Win a T-Shirt!
-                        </li>
-                        <li
-                            class="mb-1 text-text-200 text-xl font-bold underline decoration-accent-400"
-                        >
-                            Get some sweets for participating!
-                        </li>
-                    </ul>
+                            <div
+                                class="h-16 md:pt-4 relative text-pretty text-white text-xl text-center font-semibold"
+                            >
+                                Behavioural Cloning
+                            </div>
+                        </div>
+                    </div>
+                    <hr
+                        class="w-48 h-1 mx-auto my-4 bg-accent-500/75 border-0 rounded md:mt-6 dark:bg-gray-700"
+                    />
+                    <div class="flex flex-col justify-center items-center">
+                        <a href="/about">
+                            <button
+                                class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br to-accent-700 from-accent-400 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
+                            >
+                                <span
+                                    class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-background-900/75 rounded-md group-hover:bg-opacity-0"
+                                >
+                                    Find out more
+                                </span>
+                            </button>
+                        </a>
+                    </div>
                 </div>
             </SimpleCard>
         </div>

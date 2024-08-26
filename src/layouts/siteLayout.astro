@@ -17,12 +17,14 @@ import "@fontsource/poppins";
     </head>
     <body class="bg-background-950">
         <div
-            class="bg-[url('/grid.svg')] bg-cover bg-center bg-no-repeat min-h-screen"
+            class="bg-[url('/dddepth-289.jpg')] bg-cover bg-center bg-no-repeat min-h-screen"
         >
             {!overrideHeader && <Header />}    
             <Navigation />
             <EntryModal />
             <slot />
+            <div class="h-12">
+            </div>
             <script
                 is:inline
                 src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
@@ -34,5 +36,4 @@ import "@fontsource/poppins";
             )
         }
     </body>
-    <Footer />
 </html>
